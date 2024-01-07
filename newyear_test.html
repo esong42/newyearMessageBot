@@ -7,35 +7,79 @@
     <style>
         body {
             font-family: 'Arial', sans-serif;
-            background-color: #f0f0f0;
+            background: linear-gradient(to right, #ffb6c1, #ffebcd);
             margin: 0;
             display: flex;
             align-items: center;
             justify-content: center;
             height: 100vh;
+            color: #333; /* 글자 색상을 어두운 회색으로 조정 */
         }
 
         .greeting-card {
             text-align: center;
-            padding: 20px;
-            border-radius: 10px;
-            background-color: #ffffff;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 50px;
+            border-radius: 15px;
+            background: linear-gradient(to right, #fff5e1, #ffdab9);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
 
         h1 {
-            color: #333;
+            color: #ff69b4; /* 핑크 톤으로 조정 */
+            font-size: 2em;
+            margin-bottom: 20px;
         }
 
         p {
-            color: #666;
+            font-size: 1.2em;
             margin-top: 10px;
+            color: #ff6347; /* 노랑 톤으로 조정 */
         }
 
         .new-year-image {
             max-width: 100%;
             height: auto;
+            margin-top: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* 추가 요소 */
+        .additional-content {
             margin-top: 20px;
+        }
+
+        a {
+            color: #ff69b4;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* 팝업 스타일 */
+        .popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            align-items: center;
+            justify-content: center;
+        }
+
+        .popup-content {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        /* 키워드 선택 스타일 */
+        select {
+            padding: 10px;
+            font-size: 1em;
+            margin-top: 10px;
         }
     </style>
 </head>
@@ -44,6 +88,36 @@
         <h1>새해 복 많이 받으세요!</h1>
         <p>행복과 건강이 가득한 새해가 되길 기원합니다.</p>
         <img class="new-year-image" src="https://example.com/your-image-url.jpg" alt="새해 이미지">
+        <div class="additional-content">
+            <p>새해 다짐: <strong>더 많은 웃음과 행복을 만들기</strong></p>
+            <p>
+                더 많은 소식을 보려면
+                <a href="javascript:void(0)" onclick="openPopup()">여기를 클릭하세요</a>
+            </p>
+            <div id="popup" class="popup">
+                <div class="popup-content">
+                    <p>새해 복 많이 받으세요! 🎉</p>
+                    <p>키워드 선택:
+                        <select>
+                            <option value="happiness">행복</option>
+                            <option value="health">건강</option>
+                            <option value="success">성공</option>
+                        </select>
+                    </p>
+                    <button onclick="closePopup()">닫기</button>
+                </div>
+            </div>
+        </div>
     </div>
+
+    <script>
+        function openPopup() {
+            document.getElementById('popup').style.display = 'flex';
+        }
+
+        function closePopup() {
+            document.getElementById('popup').style.display = 'none';
+        }
+    </script>
 </body>
 </html>
