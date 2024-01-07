@@ -119,7 +119,6 @@
     <div class="greeting-card">
         <h1>새해 복 많이 받으세요!</h1>
         <p>행복과 건강이 가득한 새해가 되길 기원합니다.</p>
-        <img class="new-year-image" src="https://example.com/your-image-url.jpg" alt="새해 이미지">
         <div class="additional-content">
             <p>
                 더 많은 소식을 보려면
@@ -127,17 +126,26 @@
             </p>
             <div id="popup" class="popup">
                 <div class="popup-content" id="popup-content">
-                    <form id="keywordForm">
+                    <form id="messageForm">
                         <p>2023년 키워드 선택:
                             <select id="2023Keywords">
-                                <option value="happiness">행복</option>
-                                <option value="health">건강</option>
-                                <option value="success">성공</option>
+                                <option value="행복">행복</option>
+                                <option value="건강">건강</option>
+                                <option value="성공">성공</option>
                                 <!-- 추가 키워드들을 여기에 추가 -->
                             </select>
                         </p>
+                        <p>2024년 키워드 선택:
+                            <select id="2024Keywords">
+                                <option value="기쁨">기쁨</option>
+                                <option value="번영">번영</option>
+                                <!-- 추가 키워드들을 여기에 추가 -->
+                            </select>
+                        </p>
+                        <p>이름 입력:
+                            <input type="text" id="userName" placeholder="이름을 입력하세요">
+                        </p>
                         <div class="button-container">
-                            <!-- 수정된 부분: 버튼 클릭 시 generateMessage() 호출 -->
                             <button type="button" onclick="generateMessage()">다음</button>
                         </div>
                     </form>
@@ -156,10 +164,17 @@
         }
 
         function generateMessage() {
-            const selectedYear = '2023'; // 현재는 고정값으로 설정
-            const selectedKeyword = document.getElementById('2023Keywords').value;
+            const userName = document.getElementById('userName').value;
+            const selectedYear2023 = '2023';
+            const selectedKeyword2023 = document.getElementById('2023Keywords').value;
+            const selectedYear2024 = '2024';
+            const selectedKeyword2024 = document.getElementById('2024Keywords').value;
 
-            const message = `새해 복 많이 받으세요! ${selectedYear}년에는 ${selectedKeyword}이(가) 가득하길 기원합니다. 🎉`;
+            const message = `
+                새해 복 많이 받으세요, ${userName}님!
+                2023년은 ${selectedKeyword2023}이(가) 가득했다면,
+                2024년은 ${selectedKeyword2024}이(가) 가득한 한 해가 될 것입니다. 🎉
+            `;
 
             alert(message);
 
