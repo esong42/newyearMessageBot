@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <button onclick="printText()">서버response 콘솔에 출력</button>
+        <script>
+            function printText() {
+                fetch('http://localhost:3000/')
+                    .then((response) => response.text())
+                    .then((result) => {
+                        console.log(result);
+                    });
+            }
+        </script>
+    </body>
+</html>
