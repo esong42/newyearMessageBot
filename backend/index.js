@@ -1,6 +1,12 @@
 import OpenAI from "openai";
-const apikey = "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";
+const apikey = "[API_KEY]"; /* 실행 전에 apikey 넣기 */
 const openai = new OpenAI({ apiKey: apikey });
+import express from "express"; /* 웹 서버 생성을 위해 */
+const app = express();
+
+app.get('/', function (req, res) {
+    res.send('Hello World')
+})
 
 async function main() {
     const completion = await openai.chat.completions.create({
@@ -14,3 +20,5 @@ async function main() {
     console.log(completion.choices[0].message.content);
 }
 main();
+
+app.listen(3000)
