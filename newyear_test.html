@@ -44,8 +44,8 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
 
-        /* 추가 요소 */
-        .additional-content {
+      /* 추가 요소 */
+      .additional-content {
             margin-top: 20px;
         }
 
@@ -53,6 +53,7 @@
             color: #ff69b4;
             text-decoration: none;
             font-weight: bold;
+            cursor: pointer;
         }
 
         /* 팝업 스타일 */
@@ -81,6 +82,17 @@
             font-size: 1em;
             margin-top: 10px;
         }
+
+        /* 이름 입력 스타일 */
+        input[type="text"] {
+            padding: 10px;
+            font-size: 1em;
+            margin-top: 10px;
+        }
+
+        .button-container {
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
@@ -89,22 +101,26 @@
         <p>행복과 건강이 가득한 새해가 되길 기원합니다.</p>
         <img class="new-year-image" src="https://example.com/your-image-url.jpg" alt="새해 이미지">
         <div class="additional-content">
-            <p>새해 다짐: <strong>더 많은 웃음과 행복을 만들기</strong></p>
             <p>
                 더 많은 소식을 보려면
                 <a href="javascript:void(0)" onclick="openPopup()">여기를 클릭하세요</a>
             </p>
             <div id="popup" class="popup">
-                <div class="popup-content">
-                    <p>새해 복 많이 받으세요! 🎉</p>
-                    <p>키워드 선택:
-                        <select>
-                            <option value="happiness">행복</option>
-                            <option value="health">건강</option>
-                            <option value="success">성공</option>
-                        </select>
-                    </p>
-                    <button onclick="closePopup()">닫기</button>
+                <div class="popup-content" id="popup-content">
+                    <form id="keywordForm">
+                        <p>2023년 키워드 선택:
+                            <select id="2023Keywords">
+                                <option value="happiness">행복</option>
+                                <option value="health">건강</option>
+                                <option value="success">성공</option>
+                                <!-- 추가 키워드들을 여기에 추가 -->
+                            </select>
+                        </p>
+                        <div class="button-container">
+                            <!-- 수정된 부분: 버튼 클릭 시 generateMessage() 호출 -->
+                            <button type="button" onclick="generateMessage()">다음</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -117,6 +133,18 @@
 
         function closePopup() {
             document.getElementById('popup').style.display = 'none';
+        }
+
+        function generateMessage() {
+            const selectedYear = '2023'; // 현재는 고정값으로 설정
+            const selectedKeyword = document.getElementById('2023Keywords').value;
+
+            const message = `새해 복 많이 받으세요! ${selectedYear}년에는 ${selectedKeyword}이(가) 가득하길 기원합니다. 🎉`;
+
+            alert(message);
+
+            // 추가된 부분: 팝업 닫기
+            closePopup();
         }
     </script>
 </body>
