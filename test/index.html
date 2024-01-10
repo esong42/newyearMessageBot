@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="./index.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="container-intro" class="container">
+        <h1>intro</h1>
+        <div class="content"></div>
+        <div class="button-container">
+            <button class="next-button" onclick="move2023()">다음</button>
+        </div>
+    </div>
+    <div id="container-2023" class="container" style = "display: none;">
+        <h1>2023키워드</h1>
+        <div class="content"></div>
+        <div class="button-container">
+            <button class="next-button" onclick="move2024()">다음</button>    
+        </div>
+    </div>
+    <div id="container-2024" class="container" style="display: none;">
+        <h1>2024키워드</h1>
+        <div class="content"></div>
+        <div class="button-container">
+            <button class="next-button" onclick="moveName()">다음</button>
+        </div>
+    </div>
+    <div id="container-name" class="container" style="display: none;">
+        <h1>이름</h1>
+        <div class="content"></div>
+        <div class="button-container">
+            <button class="next-button" onclick="moveMessageCard()">다음</button>
+        </div>
+    </div>
+    <div id="container-message" class="container" style="display: none;">
+        <h1>새해메세지</h1>
+        <div class="content"></div>
+    </div>
+</body>
+</html>
