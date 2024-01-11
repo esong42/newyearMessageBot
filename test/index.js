@@ -27,6 +27,19 @@ function generateMessage() {
     });
 }
 
+function checkInput(inputId, containerId, content)
+{
+    const inputValue = document.getElementById(inputId).value;
+    if (inputValue == "") {
+        alert(`${content} 입력해주세요`);
+    } else {
+        if (inputId == 'keyword-2024') {
+            generateMessage();
+        }
+        showContainer(containerId);
+    }
+}
+
 function showContainer(containerId) {
     // 모든 container를 숨김
     document.querySelectorAll('.container').forEach(function(container) {
@@ -42,16 +55,15 @@ function moveName() {
 }
 
 function move2023() {
-    showContainer('container-2023');
+    checkInput('user-name', 'container-2023', '이름을')
 }
 
 function move2024() {
-    showContainer('container-2024');
+    checkInput('keyword-2023', 'container-2024', '2023키워드를')
 }
 
 function moveMessageCard() {
-    showContainer('container-message');
-    generateMessage();
+    checkInput('keyword-2024', 'container-message', '2024키워드를')
 }
 
 function CreateNewCard() {
