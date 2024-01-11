@@ -22,7 +22,7 @@ function generateMessage() {
     })
     .then((response) => response.text())
     .then((result) => {
-        document.getElementById('result-message').textContent = result;
+        document.getElementById('result-content').textContent = result;
     });
 }
 
@@ -39,7 +39,7 @@ function checkInput(inputId, containerId, content)
             setTimeout(function () {
                 document.getElementById("container-loading").style.display = "none";
                 document.getElementById("container-message").style.display = "block";
-            }, 5000);
+            }, 7000);
         } else {
             showContainer(containerId);
         }

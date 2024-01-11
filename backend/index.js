@@ -1,5 +1,5 @@
 import OpenAI from "openai";
-const apikey = "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"; /* 실행 전에 apikey 넣기 */
+const apikey = "-"; /* 실행 전에 apikey 넣기 */
 const openai = new OpenAI({ apiKey: apikey });
 import cors from "cors"; /* HTML에서 온 요청을 받기 위해 */
 import express from "express"; /* 웹 서버 생성을 위해 */
