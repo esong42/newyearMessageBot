@@ -32,10 +32,17 @@ function checkInput(inputId, containerId, content)
     if (inputValue == "") {
         alert(`${content} 입력해주세요`);
     } else {
-        if (inputId == 'keyword-2023') {
+        if (inputId == 'keyword-2024') {
             generateMessage();
+            document.getElementById("container-2024").style.display = "none";
+            document.getElementById("container-loading").style.display = "block";
+            setTimeout(function () {
+                document.getElementById("container-loading").style.display = "none";
+                document.getElementById("container-message").style.display = "block";
+            }, 5000);
+        } else {
+            showContainer(containerId);
         }
-        showContainer(containerId);
     }
 }
 
@@ -59,10 +66,6 @@ function move2023() {
 
 function move2024() {
     checkInput('keyword-2023', 'container-2024', '2023키워드를')
-    setTimeout(function() {
-        document.getElementById("container-loading").style.display = "none";
-        document.getElementById("container-message").style.display = "block";
-    }, 4000);
 }
 
 function moveMessageCard() {
