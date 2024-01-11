@@ -35,10 +35,10 @@ function checkInput(inputId, containerId, content)
         if (inputId == 'keyword-2024') {
             generateMessage();
             document.getElementById("container-2024").style.display = "none";
-            document.getElementById("container-loading").style.display = "block";
+            document.getElementById("container-loading").style.display = "flex";
             setTimeout(function () {
                 document.getElementById("container-loading").style.display = "none";
-                document.getElementById("container-message").style.display = "block";
+                document.getElementById("container-message").style.display = "flex";
             }, 7000);
         } else {
             showContainer(containerId);
