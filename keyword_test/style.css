@@ -1,0 +1,14 @@
+.keyword-container {
+    border: 1px solid black;
+    width: 500px;
+    height: 800px;
+}
+
+.span {
+    display: inline-block; /* 이걸 해야지 상하도 margin이 적용됨.*/
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: beige;
+    margin: 2px 10px; /* 상하:2px, 좌우:10px */
+    padding: 4px 25px /* 상하:4px, 좌우:25px */
+}
