@@ -9,7 +9,7 @@ function generateMessage() {
     const selectedYear2024 = '2024';
     const selectedKeyword2024 = document.getElementById('keyword-2024').value;
 
-    const userMessage = `${userName}/${selectedKeyword2023}/${selectedKeyword2024}`;
+    const userMessage = `이름:${userName}/2023키워드:${selectedKeyword2023}/2024키워드:${selectedKeyword2024}`;
     
     fetch('http://localhost:3000/', {
         method: 'POST',
