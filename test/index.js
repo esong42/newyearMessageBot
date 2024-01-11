@@ -22,8 +22,7 @@ function generateMessage() {
     })
     .then((response) => response.text())
     .then((result) => {
-        alert(result);
-        closePopup();
+        document.getElementById('result-message').textContent = result;
     });
 }
 
@@ -33,7 +32,7 @@ function checkInput(inputId, containerId, content)
     if (inputValue == "") {
         alert(`${content} 입력해주세요`);
     } else {
-        if (inputId == 'keyword-2024') {
+        if (inputId == 'keyword-2023') {
             generateMessage();
         }
         showContainer(containerId);
@@ -60,6 +59,10 @@ function move2023() {
 
 function move2024() {
     checkInput('keyword-2023', 'container-2024', '2023키워드를')
+    setTimeout(function() {
+        document.getElementById("container-loading").style.display = "none";
+        document.getElementById("container-message").style.display = "block";
+    }, 4000);
 }
 
 function moveMessageCard() {
@@ -69,29 +72,3 @@ function moveMessageCard() {
 function CreateNewCard() {
     showContainer('container-intro');
 }
-
-// const containerIntro = document.getElementById('container-intro');
-// const containerName = document.getElementById('container-name');
-// const container2023 = document.getElementById('container-2023');
-// const container2024 = document.getElementById('container-2024');
-// const containerMessage = document.getElementById('container-message');
-
-// function moveName() {
-//     containerIntro.style.display = 'none';
-//     containerName.style.display = 'block';
-// }
-
-// function move2023() {
-//     containerName.style.display = 'none';
-//     container2023.style.display = 'block';
-// }
-
-// function move2024() {        
-//     container2023.style.display = 'none';
-//     container2024.style.display = 'block';
-// }
-
-// function moveMessageCard() {
-//     container2024.style.display = 'none';
-//     containerMessage.style.display = 'block';
-// }
