@@ -115,3 +115,9 @@ function copyToClipboard() {
         console.error('클립보드 복사 실패: ', err);
       });
   }
+
+function handleKeyPress(event, callback) {
+    if (event.keyCode === 13) {
+        callback();
+    }
+}
