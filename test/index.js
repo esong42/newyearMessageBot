@@ -4,14 +4,12 @@
 // test\index.html 웹사이트 켜서 이름이랑 각 키워드들 넣고 버튼 쭉쭉 누르면 됩니당
 function generateMessage() {
     const userName = document.getElementById('user-name').value;
-    const selectedYear2023 = '2023';
     const selectedKeyword2023 = document.getElementById('keyword-2023').value;
-    const selectedYear2024 = '2024';
     const selectedKeyword2024 = document.getElementById('keyword-2024').value;
 
     const userMessage = `이름:${userName}/2023키워드:${selectedKeyword2023}/2024키워드:${selectedKeyword2024}`;
     
-    fetch('http://localhost:3000/', {
+    fetch('http://localhost:3000/keyword', {
         method: 'POST',
         headers: {
             'content-Type': 'application/json',
@@ -25,6 +23,33 @@ function generateMessage() {
         document.getElementById('result-content').textContent = result;
     });
 }
+
+function generateMessage_random() {
+    const userName = document.getElementById('user-name').value;
+
+    const userMessage = `이름:${userName}`;
+    
+    fetch('http://localhost:3000/random', {
+        method: 'POST',
+        headers: {
+            'content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+            userMessage: userMessage,
+        }),
+    })
+    .then((response) => response.text())
+    .then((result) => {
+        document.getElementById('result-content').textContent = result;
+    });
+    document.getElementById("container-name").style.display = "none";
+    document.getElementById("container-loading").style.display = "flex";
+    setTimeout(function () {
+        document.getElementById("container-loading").style.display = "none";
+        document.getElementById("container-message").style.display = "flex";
+    }, 7000);
+}
+
 
 function checkInput(inputId, containerId, content)
 {
