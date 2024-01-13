@@ -98,3 +98,16 @@ input {
 /* input 아래만 남기고 테두리 제거했는데, 클릭을 하면 테두리 전체가 다시 생김 */
 /* 클릭했을 때도 테두리 안 생기게 하기 위해서 밑에 명령줄 추가 */
 input:focus {outline: none;}
+
+#loader {
+    font-size: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#loader span {
+    margin-top: 1px;
+    font-size: 16px;
+}

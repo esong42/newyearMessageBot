@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="style.css">
     <script defer src="./index.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
     <title>Document</title>
 </head>
 <body>
@@ -66,8 +67,12 @@
     </div>
     <div id="container-loading" class="container" style="display: none;">
         <p style="text-align: left; color:#FFFFFF;">&nbsp; &nbsp;New Year Message Bot</p>
-        <br><br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br><br>
         <p><span id="display-name"></span>님을 위한 새해 메시지를 작성중입니다.<br>잠시만 기다려주세요..</p>
+        <div id="loader" class="loader">
+            <i class="fa fa-spinner fa-spin"></i>
+            <span>로딩중..</span>
+        </div>
     </div>
     <div id="container-message" class="container" style="display: none;">
         <p style="text-align: left; color:#FFFFFF;">&nbsp; &nbsp;New Year Message Bot</p>
