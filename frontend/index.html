@@ -25,7 +25,7 @@
             3. 2024년에 기대하는 키워드를 작성한다.<br>
             4. 잠시 기다리면 메시지가 작성된다!</p>
         </div>
-        <div class="button-container">
+        <div class="button-intro-container">
             <button class="next-button" onclick="moveName()">다음</button>
         </div>
     </div>
@@ -34,10 +34,12 @@
         <p style="font-size:40px; line-height : 0px;"><b>이름</b></p>
         <div class="content">
             <input type="text" id="user-name" onkeydown="handleKeyPress(event, move2023)" placeholder="ex)홍길동">
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+            <button class="next-button" onclick="generateMessage_random()">랜덤</button>
         </div>
         <div class="button-container">
+            <button class="next-button" onclick="moveIntro()">이전</button>
             <button class="next-button" onclick="move2023()">다음</button>
-            <button class="next-button" onclick="generateMessage_random()">랜덤</button>    
         </div>
     </div>
     <div id="container-2023" class="container" style="display: none;">
@@ -47,6 +49,7 @@
             <input type="text" id="keyword-2023" onkeydown="handleKeyPress(event, move2024)"> <!-- 일단은 테스트 하기 위해서 input형태로 했습니다 -->
         </div>
         <div class="button-container">
+            <button class="next-button" onclick="moveName()">이전</button>
             <button class="next-button" onclick="move2024()">다음</button>
         </div>
     </div>
@@ -57,6 +60,7 @@
             <input type="text" id="keyword-2024" onkeydown="handleKeyPress(event, moveMessageCard)">  <!-- 일단은 테스트 하기 위해서 input형태로 했습니다 -->
         </div>
         <div class="button-container">
+            <button class="next-button" onclick="move2023()">이전</button>
             <button class="next-button" onclick="moveMessageCard()">다음</button>
         </div>
     </div>

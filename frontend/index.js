@@ -81,6 +81,10 @@ function showContainer(containerId) {
     document.getElementById(containerId).style.display = 'flex';
 }
 
+function moveIntro() {
+    showContainer('container-intro');
+}
+
 function moveName() {
     showContainer('container-name');
 }
@@ -98,7 +102,8 @@ function moveMessageCard() {
 }
 
 function CreateNewCard() {
-    showContainer('container-intro');
+    // 새로고침
+    location.reload(true);
 }
 
 function copyToClipboard() {

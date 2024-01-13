@@ -40,11 +40,20 @@ body {
     background-color: #ffffff;
 }
 
+.button-intro-container {
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #E5B299;
+    padding-right: 10px;
+}
+
 .button-container {
     height: 40px;
     /* 수평 정렬 */
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     background-color: #E5B299;
     padding-right: 10px;
