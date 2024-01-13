@@ -75,3 +75,18 @@ function moveMessageCard() {
 function CreateNewCard() {
     showContainer('container-intro');
 }
+
+function copyToClipboard() {
+    // 텍스트를 선택할 요소를 가져옵니다.
+    var messageElement = document.getElementById("result-content");
+    var messageText = messageElement.innerText;
+
+    // 복사 명령을 실행합니다.
+    navigator.clipboard.writeText(messageText)
+    .then(function() {
+      alert("메시지가 클립보드에 복사되었습니다!");
+    })
+    .catch(function(err) {
+        console.error('클립보드 복사 실패: ', err);
+      });
+  }
