@@ -19,7 +19,7 @@
     <div id="container-name" class="container" style = "display: none;">
         <h1>이름</h1>
         <div class="content">
-            <input type="text" id="user-name">
+            <input type="text" id="user-name" onkeydown="handleKeyPress(event, move2023)">
         </div>
         <div class="button-container">
             <button class="next-button" onclick="move2023()">다음</button>
@@ -29,7 +29,7 @@
     <div id="container-2023" class="container" style="display: none;">
         <h1>2023키워드</h1>
         <div class="content">
-            <input type="text" id="keyword-2023"> <!-- 일단은 테스트 하기 위해서 input형태로 했습니다 -->
+            <input type="text" id="keyword-2023" onkeydown="handleKeyPress(event, move2024)"> <!-- 일단은 테스트 하기 위해서 input형태로 했습니다 -->
         </div>
         <div class="button-container">
             <button class="next-button" onclick="move2024()">다음</button>
@@ -38,7 +38,7 @@
     <div id="container-2024" class="container" style="display: none;">
         <h1>2024키워드</h1>
         <div class="content">
-            <input type="text" id="keyword-2024">  <!-- 일단은 테스트 하기 위해서 input형태로 했습니다 -->
+            <input type="text" id="keyword-2024" onkeydown="handleKeyPress(event, moveMessageCard)">  <!-- 일단은 테스트 하기 위해서 input형태로 했습니다 -->
         </div>
         <div class="button-container">
             <button class="next-button" onclick="moveMessageCard()">다음</button>
