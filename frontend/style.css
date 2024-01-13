@@ -16,6 +16,12 @@ body {
     /* 추가적인 스타일링 가능 */
 }
 
+.container p {
+    font-family: 'Noto Sans KR', sans-serif;
+    color: #000000; /* 글자 색을 원하는 색상으로 변경 (예: 검은색) */
+    /* 추가적인 스타일링 가능 */
+}
+
 .container {
     height:700px;
     width: 450px;
