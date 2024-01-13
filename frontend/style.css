@@ -6,68 +6,68 @@ body {
     /* container 수직 정렬 */
     align-items: center;
     height: 100vh;
-    background-color: #f4f4f4;
+    background-color: #EFF0F2;
     font-family: 'Noto Sans KR', sans-serif;
 }
 
 .container h1 {
     font-family: 'Noto Sans KR', sans-serif;
-    color: #dd991a; /* 글자 색을 원하는 색상으로 변경 (예: 검은색) */
+    color: #334557; /* 글자 색을 원하는 색상으로 변경 (예: 검은색) */
     /* 추가적인 스타일링 가능 */
 }
 
 .container {
-    height: 650px;
+    height:700px;
     width: 450px;
-    background-color: #ffda96;
-    border: 3px solid #ffe5b4;
+    background-color: #E5B299;
     text-align: center; /* 안에 요소 수평 정렬 */
     flex-direction: column;
     display: flex;
-    border-radius: 8px;
 }
 
 .content {
     flex: 1;
+    border : 6px solid;
     border-radius: 8px;
-    margin: 20px;
-    border: 3px solid #ffe5b4;;
+    border-color: #eecdbc;
+    margin: 10px;
     background-color: #ffffff;
 }
 
 .button-container {
     height: 40px;
-    border: 3px solid #ffacba;
     /* 수평 정렬 */
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #fcc5ce;
+    background-color: #E5B299;
     padding-right: 10px;
+    border-radius: 8px;
 }
 
 .next-button {
-    background-color: #e76da0; /* 배경색 */
-    color: white; /* 텍스트 색상 */
-    border: none; /* 기본 버튼 테두리 제거 */
+    background-color: #EFF0F2; /* 배경색 */
+    color: #334557; /* 텍스트 색상 */
+    border : 4px solid;
+    border-radius: 8px;
+    border-color: #eecdbc;
     padding: 8px 16px; /* 보다 나은 외관을 위한 패딩 추가 */
-    border-radius: 4px; /* 둥근 모서리 */
     cursor: pointer; /* 호버 시 포인터 커서 추가 */
     transition: background-color 0.3s ease; /* 부드러운 배경색 전환을 위한 트랜지션 설정 */
     font-family: 'Noto Sans KR', sans-serif;
+    margin-bottom: 10px;
 }
 
 .next-button:hover { /* 마우스 가져갔을때 색상 변경하는 거!! */
-    background-color: #df3b7a; 
+    background-color: #c6c8cc; 
 }
 
 .button-container-restart {
     height: 40px;
-    border: 3px solid #ffacba;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #fcc5ce;
+    background-color: #E5B299;
     padding-right: 10px;
 }
 
