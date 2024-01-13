@@ -4,6 +4,7 @@
 // test\index.html 웹사이트 켜서 이름이랑 각 키워드들 넣고 버튼 쭉쭉 누르면 됩니당
 function generateMessage() {
     const userName = document.getElementById('user-name').value;
+    document.getElementById('display-name').innerText = userName;
     const selectedKeyword2023 = document.getElementById('keyword-2023').value;
     const selectedKeyword2024 = document.getElementById('keyword-2024').value;
 
@@ -26,7 +27,7 @@ function generateMessage() {
 
 function generateMessage_random() {
     const userName = document.getElementById('user-name').value;
-
+    document.getElementById('display-name').innerText = userName;
     const userMessage = `이름:${userName}`;
     
     fetch('http://localhost:3000/random', {
