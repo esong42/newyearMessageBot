@@ -50,14 +50,15 @@ function generateMessage_random() {
     }, 7000);
 }
 
-
 function checkInput(inputId, containerId, content)
 {
     const inputValue = document.getElementById(inputId).value;
     if (inputValue == "") {
         alert(`${content} 입력해주세요`);
     } else {
-        if (inputId == 'keyword-2024') {
+        if (containerId == 'container-name') {
+            generateMessage_random();
+        } else if (inputId == 'keyword-2024') {
             generateMessage();
             document.getElementById("container-2024").style.display = "none";
             document.getElementById("container-loading").style.display = "flex";
