@@ -1,20 +1,59 @@
 <!DOCTYPE html>
 <html lang="ko">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
-    </head>
-    <body>
-        <button onclick="printText()">서버response 콘솔에 출력</button>
-        <script>
-            function printText() {
-                fetch('http://localhost:3000/')
-                    .then((response) => response.text())
-                    .then((result) => {
-                        console.log(result);
-                    });
-            }
-        </script>
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="./index.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container-intro" class="container">
+        <h1>intro</h1>
+        <div class="content"></div>
+        <div class="button-container">
+            <button class="next-button" onclick="moveName()">다음</button>
+        </div>
+    </div>
+    <div id="container-name" class="container" style = "display: none;">
+        <h1>이름</h1>
+        <div class="content">
+            <input type="text" id="user-name">
+        </div>
+        <div class="button-container">
+            <button class="next-button" onclick="move2023()">다음</button>
+            <button class="next-button" onclick="generateMessage_random()">랜덤</button>    
+        </div>
+    </div>
+    <div id="container-2023" class="container" style="display: none;">
+        <h1>2023키워드</h1>
+        <div class="content">
+            <input type="text" id="keyword-2023"> <!-- 일단은 테스트 하기 위해서 input형태로 했습니다 -->
+        </div>
+        <div class="button-container">
+            <button class="next-button" onclick="move2024()">다음</button>
+        </div>
+    </div>
+    <div id="container-2024" class="container" style="display: none;">
+        <h1>2024키워드</h1>
+        <div class="content">
+            <input type="text" id="keyword-2024">  <!-- 일단은 테스트 하기 위해서 input형태로 했습니다 -->
+        </div>
+        <div class="button-container">
+            <button class="next-button" onclick="moveMessageCard()">다음</button>
+        </div>
+    </div>
+    <div id="container-loading" class="container" style="display: none;">
+        <h1>로딩중...</h1>
+    </div>
+    <div id="container-message" class="container" style="display: none;">
+        <h1>새해메세지</h1>
+        <div id="result-content" class="content"></div>
+        <div class="button-container-restart">
+            <button class="next-button" onclick="copyToClipboard()">클립보드에 복사</button>
+            <button class="next-button" onclick="CreateNewCard()">다시하기</button>
+        </div>
+    </div>
+</body>
 </html>
