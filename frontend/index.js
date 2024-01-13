@@ -50,15 +50,23 @@ function generateMessage_random() {
     }, 7000);
 }
 
+function checkInput_random(inputId)
+{
+    const inputValue = document.getElementById(inputId).value;
+    if (inputValue == "") {
+        alert("이름을 입력해주세요");
+    } else {
+        generateMessage_random();
+    }
+}
+
 function checkInput(inputId, containerId, content)
 {
     const inputValue = document.getElementById(inputId).value;
     if (inputValue == "") {
         alert(`${content} 입력해주세요`);
     } else {
-        if (containerId == 'container-name') {
-            generateMessage_random();
-        } else if (inputId == 'keyword-2024') {
+        if (inputId == 'keyword-2024') {
             generateMessage();
             document.getElementById("container-2024").style.display = "none";
             document.getElementById("container-loading").style.display = "flex";
