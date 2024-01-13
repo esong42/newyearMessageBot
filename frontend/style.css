@@ -71,6 +71,7 @@ body {
     transition: background-color 0.3s ease; /* 부드러운 배경색 전환을 위한 트랜지션 설정 */
     font-family: 'Noto Sans KR', sans-serif;
     margin-bottom: 10px;
+    margin-left: 10px;
 }
 
 .next-button:hover { /* 마우스 가져갔을때 색상 변경하는 거!! */
