@@ -71,9 +71,14 @@ body {
     padding-right: 10px;
 }
 
-/* 원래 .container{display: flex}랑  .content{flex:1}로 해가지고 */
-/* 남는 공간을 content로 꽉 채우도록 했는데.... */
-/* 2023, 2024.. 컨테이너들이 처음에 display:none으로 되어 있어서 */
-/* 그게 영향을 미쳐서 intro말고는 flex가 기능을 못해가지고 */
-/* 일단은 주석처리하고 height를 520.125(처음에 자동으로 꽉 채워줬을 때 높이)px로 */
-/* 해줬습ㄴ디ㅏ....ㅠㅠ */
+input {
+    font-size:20px;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0.5px;
+  }
+
+/* input 아래만 남기고 테두리 제거했는데, 클릭을 하면 테두리 전체가 다시 생김 */
+/* 클릭했을 때도 테두리 안 생기게 하기 위해서 밑에 명령줄 추가 */
+input:focus {outline: none;}
