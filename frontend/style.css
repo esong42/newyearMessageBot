@@ -24,7 +24,7 @@ body {
 
 /* 원래 길이 700, 450 */
 .container {
-    height:560px;
+    height:570px;
     width: 360px;
     background-color: #E5B299;
     text-align: center; /* 안에 요소 수평 정렬 */
