@@ -22,13 +22,29 @@ body {
     /* 추가적인 스타일링 가능 */
 }
 
+/* 원래 길이 700, 450 */
 .container {
-    height:700px;
-    width: 450px;
+    height:560px;
+    width: 360px;
     background-color: #E5B299;
     text-align: center; /* 안에 요소 수평 정렬 */
     flex-direction: column;
     display: flex;
+}
+
+@media (min-width: 700px)
+{
+    .container {
+        height: 700px;
+        width: 450px;
+    }
+    #intro-text {
+        margin-top: 40px;
+        line-height: 35px; /* 줄 간격 주기 */
+    }
+    #manual-text {
+        line-height: 35px; /* 줄 간격 주기 */
+    }
 }
 
 .content {
