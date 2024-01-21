@@ -113,3 +113,45 @@ input:focus {outline: none;}
     margin-top: 1px;
     font-size: 16px;
 }
+
+#modalCloseButton {
+    cursor: pointer;
+}
+
+#modalOpenButton {
+    background-color: #E5B299; /* 배경색 */
+    color: #000000; /* 텍스트 색상 */
+    border : 4px solid;
+    border-radius: 8px;
+    border-color: #E5B299;
+    padding: 8px 16px; /* 보다 나은 외관을 위한 패딩 추가 */
+    cursor: pointer; /* 호버 시 포인터 커서 추가 */
+    transition: background-color 0.3s ease; /* 부드러운 배경색 전환을 위한 트랜지션 설정 */
+    font-family: 'Noto Sans KR', sans-serif;
+    margin-bottom: 10px;
+    margin-left: 10px;
+  }
+  
+  #modalContainer {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+  }
+  
+  #modalContent {
+    position: absolute;
+    background-color: #777777;
+    width: 300px;
+    height: 300px;
+    padding: 15px;
+}
+  
+  #modalContainer.hidden {
+    display: none;
+  }

@@ -80,6 +80,16 @@
         <div id="result-content" class="content"></div>
         <div class="button-container-restart">
             <button class="next-button" onclick="copyToClipboard()">클립보드에 복사</button>
+            <button id="modalOpenButton">개발 정보</button>
+            <div id="modalContainer" class="hidden">
+                <div id="modalContent">
+                    <p><b>[ developer ]</b><br><br>doyoungkim-code (김도영)<br>esong1455 (송은혜)<br><br>
+                    <b>[ github ]</b><br><br><a href="https://github.com/esong1455/newyearMessageBot" class="github_link" target="_blank">
+                        <img src="https://tistory3.daumcdn.net/tistory/1688928/skin/images/github.png" width="50" height="50">
+                    </a><br><br></p>
+                    <button id="modalCloseButton">닫기</button>
+                </div>
+            </div>
             <button class="next-button" onclick="CreateNewCard()">다시하기</button>
         </div>
     </div>
