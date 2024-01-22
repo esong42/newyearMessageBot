@@ -47,6 +47,13 @@ body {
     }
 }
 
+#result-content
+{
+    padding-top: 20px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
 .content {
     flex: 1;
     border : 6px solid;

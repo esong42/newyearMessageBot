@@ -1,4 +1,4 @@
-import screats from "./screats.json" assert { type: "json" };
+import screats from "../screats.json" assert { type: "json" };
 import OpenAI from "openai";
 const apikey = screats.API_KEY;
 const openai = new OpenAI({ apiKey: apikey});
