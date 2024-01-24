@@ -1,10 +1,18 @@
-import screats from "../screats.json" assert { type: "json" };
+/*
+    netlify 배포를 위한 모듈
+    : netlify-cli, netlify-lambda, serverless-http
+*/
+// dotenv: .env파일에 선언한 환경변수를 process.env로 로드하는 모듈
+import dotenv from "dotenv";
 import OpenAI from "openai";
-const apikey = screats.API_KEY;
-const openai = new OpenAI({ apiKey: apikey});
 import cors from "cors"; /* HTML에서 온 요청을 받기 위해 */
 import express from "express"; /* 웹 서버 생성을 위해 */
+import serverless from "serverless-http";
+dotenv.config();
+const apikey = screats.API_KEY;
+const openai = new OpenAI({ apiKey: apikey});
 const app = express();
+const router = express.Router();
 
 app.use(cors());
 
