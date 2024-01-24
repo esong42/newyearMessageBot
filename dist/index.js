@@ -70,7 +70,7 @@ function checkInput(inputId, containerId, content)
             setTimeout(function () {
                 document.getElementById("container-loading").style.display = "none";
                 document.getElementById("container-message").style.display = "flex";
-            }, 7000);
+            }, 8000);
         } else {
             showContainer(containerId);
         }
