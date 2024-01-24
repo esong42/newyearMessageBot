@@ -6,7 +6,7 @@ function generateMessage() {
 
     const userMessage = `이름:${userName}/2023키워드:${selectedKeyword2023}/2024키워드:${selectedKeyword2024}`;
     
-    fetch('https://newyearmessagebot.netlify.app/keyword', {
+    fetch('https://newyearmessagebot.netlify.app/.netlify/functions/api/keyword', {
         method: 'POST',
         headers: {
             'content-Type': 'application/json',
@@ -26,7 +26,7 @@ function generateMessage_random() {
     document.getElementById('display-name').innerText = userName;
     const userMessage = `이름:${userName}`;
     
-    fetch('https://newyearmessagebot.netlify.app/random', {
+    fetch('https://newyearmessagebot.netlify.app/.netlify/functions/api/random', {
         method: 'POST',
         headers: {
             'content-Type': 'application/json',

@@ -18,7 +18,7 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.router('/', function (req, res) {
+router.get('/', function (req, res) {
     res.send('Hello World')
 })
 
