@@ -1,7 +1,3 @@
-// 서버랑 연결되는 지 확인하기 위해 이전에 만들었던 코드 넣어봤습니다.
-// 일단 나중에 다시 수정은 해야합니당
-// backend\index.js에서 key넣고, 터미널에서 cd backend한 뒤에 node index.js하고,
-// test\index.html 웹사이트 켜서 이름이랑 각 키워드들 넣고 버튼 쭉쭉 누르면 됩니당
 function generateMessage() {
     const userName = document.getElementById('user-name').value;
     document.getElementById('display-name').innerText = userName;
@@ -10,7 +6,7 @@ function generateMessage() {
 
     const userMessage = `이름:${userName}/2023키워드:${selectedKeyword2023}/2024키워드:${selectedKeyword2024}`;
     
-    fetch('http://localhost:3000/keyword', {
+    fetch('https://newyearmessagebot.netlify.app/keyword', {
         method: 'POST',
         headers: {
             'content-Type': 'application/json',
@@ -30,7 +26,7 @@ function generateMessage_random() {
     document.getElementById('display-name').innerText = userName;
     const userMessage = `이름:${userName}`;
     
-    fetch('http://localhost:3000/random', {
+    fetch('https://newyearmessagebot.netlify.app/random', {
         method: 'POST',
         headers: {
             'content-Type': 'application/json',
